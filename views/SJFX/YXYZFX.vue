@@ -1,5 +1,5 @@
 <template>
-    <div>我是YXYZFX页面</div>
+    <div></div>
 </template>
 <script>
 export default{

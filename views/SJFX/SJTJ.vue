@@ -215,45 +215,7 @@ export default{
         }
        console.log(res)
       })
-      // getSJTJ().then(res=>{
-      //   const {code,data}=res.data
-      //   if(code===20000){
-      //     this.tableData=data.tableData
-      //     // const order=data.orderData
-           
-      //   }
-      //   console.log(res)
-      // })
-        // getSJTJ().then(res=>{
-        //     const {code,data}=res.data
-        //     if(code===20000){
-        //         this.tableData=data.tableData
-        //         const order= data.orderData
-        //         const xData=order.date
-        //         const keyArray= Object.keys(order.data[0])
-        //         const series=[]
-        //         keyArray.forEach(key=>{
-        //             series.push({
-        //                 name:key,
-        //                 data:order.data.map(item=>item[key]),
-        //                 type:'line'
-        //             })
-        //         })
-        //         const option={
-        //             xAxis:{
-        //                 data:xData
-        //             },
-        //             yAxis:{},
-        //             legend:{
-        //                 data:keyArray
-        //             },
-        //             series
-        //         }
-        //       const E=  echarts.init(this.$ref.echarts)
-        //       E.setOption(option)
-        //     }
-           
-        // })
+     
   }
 }
 </script>

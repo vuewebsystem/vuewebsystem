@@ -1,12 +1,13 @@
 import Vue from 'vue'
 import App from './App.vue'
-import { Button,Radio,Container,Main,Header,Aside,Menu,Submenu,MenuItemGroup,MenuItem,Dropdown,DropdownMenu,DropdownItem,Row,Col,Card,Table,TableColumn,Input,Form,FormItem,Option, OptionGroup,Upload, Message, MessageBox} from 'element-ui';
+import { Button,Radio,Container,Main,Header,Aside,Menu,Submenu,MenuItemGroup,MenuItem,Dropdown,DropdownMenu,DropdownItem,Row,Col,Card,Table,TableColumn,Input,Form,FormItem,Option, OptionGroup,Upload, Message, MessageBox,DatePicker} from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import './assets/less/index.less'
 import router from  '../router'
 import http from 'axios'
 import '../api1/mock.js'
 import store from '../store'
+import esri from"esri-loader";
 
 
 
@@ -36,6 +37,7 @@ Vue.use(FormItem)
 Vue.use(Option)
 Vue.use(OptionGroup)
 Vue.use(Upload)
+Vue.use(DatePicker)
 Vue.prototype.$http=http
 Vue.prototype.$confirm=MessageBox.confirm
 Vue.prototype.$message=Message
@@ -51,6 +53,7 @@ router.beforeEach((to,from,next)=>{
 })
 
 new Vue({
+  esri,
   store,
   router,
   render: h => h(App),
