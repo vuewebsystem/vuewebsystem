@@ -10,7 +10,7 @@ export default{
     methods:{
        _createmap:function(){
            let options={
-               url:'https://edutrial.geoscene.cn/geoscene/rest/services/%E5%89%91%E9%98%81%E5%8E%BF/MapServer',
+               url:'',
                css:'https://js.arcgis.com/4.23/esri/themes/light/main.css'
            };
     loadModules(["esri/Map", "esri/views/MapView"],options).then(([Map,MapView])=>{
