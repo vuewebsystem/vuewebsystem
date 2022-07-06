@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
-import { Button,Radio,Container,Main,Header,Aside,Menu,Submenu,MenuItemGroup,MenuItem,Dropdown,DropdownMenu,DropdownItem,Row,Col,Card,Table,TableColumn,Input,Form,FormItem,Option, OptionGroup,Upload, Message, MessageBox,DatePicker} from 'element-ui';
+import { Button,Radio,Container,Main,Header,Aside,Menu,Submenu,MenuItemGroup,MenuItem,Dropdown,DropdownMenu,DropdownItem,Row,Col,Card,Table,TableColumn,Input,Form,FormItem,Option, OptionGroup,Upload, Message, MessageBox,DatePicker,Select,Divider} from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import './assets/less/index.less'
 import router from  '../router'
@@ -12,8 +12,9 @@ import esri from"esri-loader";
 
 
 Vue.config.productionTip=false
-
+Vue.use(Divider)
 Vue.use(Radio)
+Vue.use(Select)
 Vue.use(Container)
 Vue.use(Main)
 Vue.use(Header)
