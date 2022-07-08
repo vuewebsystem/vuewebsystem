@@ -13,3 +13,9 @@ export const getData=()=>{
 
     })
 }
+
+export const getJCdata=()=>{
+    return axios.request({
+        url:'/JC'
+    })
+}

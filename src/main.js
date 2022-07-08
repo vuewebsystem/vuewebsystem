@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
-import { Button,Radio,Container,Main,Header,Aside,Menu,Submenu,MenuItemGroup,MenuItem,Dropdown,DropdownMenu,DropdownItem,Row,Col,Card,Table,TableColumn,Input,Form,FormItem,Option, OptionGroup,Upload, Message, MessageBox,DatePicker} from 'element-ui';
+import { Button,Radio,Container,Main,Header,Aside,Menu,Submenu,MenuItemGroup,MenuItem,Dropdown,DropdownMenu,DropdownItem,Row,Col,Card,Table,TableColumn,Input,Form,FormItem,Option, OptionGroup,Upload, Message, MessageBox,DatePicker,TimeSelect} from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import './assets/less/index.less'
 import router from  '../router'
@@ -10,6 +10,12 @@ import store from '../store'
 import esri from"esri-loader";
 
 
+import Router from 'vue-router'
+
+const routerPush = Router.prototype.push
+Router.prototype.push = function push(location) {
+  return routerPush.call(this, location).catch(error=> error)
+}
 
 Vue.config.productionTip=false
 
@@ -38,6 +44,7 @@ Vue.use(Option)
 Vue.use(OptionGroup)
 Vue.use(Upload)
 Vue.use(DatePicker)
+Vue.use(TimeSelect)
 Vue.prototype.$http=http
 Vue.prototype.$confirm=MessageBox.confirm
 Vue.prototype.$message=Message

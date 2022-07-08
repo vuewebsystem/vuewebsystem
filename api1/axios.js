@@ -1,7 +1,7 @@
 import axios from "axios";
+import config1 from "../config1/index";
 
-import config from "../config1/index";
-const baseUrl=process.env.NODE_ENV==='development'?config.baseUrl.dev:config.baseUrl.pro
+const baseUrl=process.env.NODE_ENV==='development'?config1.baseUrl.dev:config1.baseUrl.pro
 class HttpRequst{
    constructor(baseUrl){
        this.baseUrl=baseUrl
